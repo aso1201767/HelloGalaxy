@@ -12,7 +12,8 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent"
+        android:stretchColumns="1" >
 
         <TableRow
             android:id="@+id/tableRow1"
@@ -23,12 +24,13 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="First Name" />
+                android:text="@string/first_name" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/edtFirst"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:inputType="text" >
 
                 <requestFocus />
             </EditText>
@@ -43,12 +45,14 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Family Name" />
+                android:text="@string/family_name" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/edtFamily"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
         </TableRow>
     </TableLayout>
 
@@ -58,16 +62,27 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btnOK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK" />
+            android:text="@string/button_ok" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel" />
+            android:text="@string/button_cancel" />
+
     </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/txvMsg"
+            android:layout_gravity="left" />
+
+    </GridLayout>
 
 </LinearLayout>
